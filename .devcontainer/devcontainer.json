@@ -4,7 +4,7 @@
     "features": {
       "docker-in-docker": "latest",
       "azure-cli": "latest",
-      "gh-cli": "latest"
+      "gh": "latest"
     },
     "extensions": [
       "ms-python.python",
