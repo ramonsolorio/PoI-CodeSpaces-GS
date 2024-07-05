@@ -19,11 +19,7 @@
       "python.pythonPath": "/usr/local/bin/python3"
     },
     "postCreateCommand": "apt-get update && apt-get install -y gh && pip install flask && npm install -g create-react-app",
-    "remoteUser": "vscode",
-    "runArgs": [
-      "--init",
-      "--privileged"
-    ],
+
     "workspaceFolder": "/workspace",
     "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
   }
