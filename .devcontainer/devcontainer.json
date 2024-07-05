@@ -3,8 +3,7 @@
     "image": "mcr.microsoft.com/devcontainers/universal:2",
     "features": {
       "docker-in-docker": "latest",
-      "azure-cli": "latest",
-      "gh": "latest"
+      "azure-cli": "latest"
     },
     "extensions": [
       "ms-python.python",
@@ -19,7 +18,7 @@
       "terminal.integrated.shell.linux": "/bin/bash",
       "python.pythonPath": "/usr/local/bin/python3"
     },
-    "postCreateCommand": "pip install flask && npm install -g create-react-app",
+    "postCreateCommand": "apt-get update && apt-get install -y gh && pip install flask && npm install -g create-react-app",
     "remoteUser": "vscode",
     "runArgs": [
       "--init",
