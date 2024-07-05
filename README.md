@@ -272,3 +272,10 @@ A successfull challenge will be considered if you can create and execute :
 
 Tip: You can use devcontainer configuration from the GH portal, also GH Copilot is your friend! 
 
+
+
+# Step 2: Build the Docker image
+docker build -t my-simple-container .
+
+# Step 3: Run the Docker container
+docker run my-simple-container
