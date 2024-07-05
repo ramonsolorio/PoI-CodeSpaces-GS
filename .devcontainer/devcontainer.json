@@ -1,22 +1,38 @@
 {
-    // Name this configuration
-    "name": "Codespace for Skills!",
-    // Use the base codespace image
-    "image": "mcr.microsoft.com/vscode/devcontainers/universal:latest",
+    "name": "Full Stack Web App Development Environment",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            // Argumentos personalizados para la construcción de la imagen, si es necesario
+        }
+    },
     "remoteUser": "codespace",
     "overrideCommand": false,
-    // Add the IDs of extensions you want installed when the container is created.
     "customizations": {
         "vscode": {
             "extensions": [
-                "GitHub.copilot"
-            ]
-        },
-        "codespaces": {
-            "openFiles": [
-                "codespace.md"
+                "GitHub.copilot",
+                "ms-azuretools.vscode-bicep",
+                "ms-python.python",
+                "ms-vscode.node-debug2",
+                "msjsdiag.debugger-for-chrome"
             ]
         }
     },
-    "postCreateCommand": "echo '# Writing code upon codespace creation!'  >> codespace.md"
+    "features": {
+        "docker-in-docker": "latest"
+    },
+    "postCreateCommand": "setup.sh",
+    "mounts": [
+        "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+    ],
+    "settings": {
+        // Configuraciones específicas de VSCode, como formateadores o linters
+    },
+    "forwardPorts": [
+        // Puertos que necesitas exponer para tu aplicación y herramientas
+    ],
+    "extensions": [
+        // Extensiones adicionales de VSCode que no están en el marketplace de VSCode
+    ]
 }
